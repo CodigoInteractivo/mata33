@@ -1,0 +1,82 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const services = [
+  { title: "Design", desc: "Websites, print, graphics" },
+  { title: "Digital Coding", desc: "Web/multimedia/database, ecommerce, mobile and desktop apps" },
+  { title: "Visual", desc: "Video editing/compositing/motion graphics, animations" },
+  { title: "Support", desc: "Updates, maintenance, assistance" },
+];
+
+const keywords = [
+  "Multimedia","Design","Websites","Graphics","Apps","Animations","Games","User experience",
+  "Database","Videos","Logos","Identity","Social","Motion","Marketing","Advertising",
+];
+---
+
+<BaseLayout
+  title="2C Creative Interactive — Web, Design and Multimedia Studio"
+  description="Creative and technological solutions for today's interactive world."
+>
+  <section class="mx-auto max-w-5xl px-4 pt-14 pb-10">
+    <p class="text-sm uppercase tracking-wider opacity-70">Web, Design and Multimedia Studio</p>
+    <h1 class="mt-3 text-3xl sm:text-5xl font-semibold tracking-tight">
+      Web, Design and Multimedia Studio
+    </h1>
+
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#what-we-do" class="border rounded-full px-4 py-2 text-sm hover:opacity-80">what we do</a>
+      <a href="#contact" class="border rounded-full px-4 py-2 text-sm hover:opacity-80">Get in touch</a>
+    </div>
+  </section>
+
+  <section id="what-we-do" class="mx-auto max-w-5xl px-4 py-12">
+    <p class="text-sm uppercase tracking-wider opacity-70">what we do</p>
+    <h2 class="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight">
+      All services in one place
+    </h2>
+
+    <div class="mt-8 grid gap-4 sm:grid-cols-2">
+      {services.map((s) => (
+        <article class="border rounded-2xl p-6">
+          <h3 class="text-lg font-semibold">{s.title}</h3>
+          <p class="mt-2 text-sm opacity-80">{s.desc}</p>
+        </article>
+      ))}
+    </div>
+
+    <p class="mt-10 max-w-3xl text-base sm:text-lg">
+      We offer creative and technological solutions to the complex needs of today's interactive world.
+    </p>
+
+    <div class="mt-6 flex flex-wrap gap-2">
+      {keywords.map((k) => (
+        <span class="border rounded-full px-3 py-1 text-xs opacity-80">{k}</span>
+      ))}
+    </div>
+  </section>
+
+  <section id="contact" class="mx-auto max-w-5xl px-4 py-12">
+    <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Get in touch</h2>
+
+    <div class="mt-8 grid gap-6 sm:grid-cols-2">
+      <div class="border rounded-2xl p-6">
+        <h3 class="text-sm uppercase tracking-wider opacity-70">Location</h3>
+        <p class="mt-3 leading-relaxed">
+          CALLE XATIVA 21-2-2A<br />
+          46002 VALENCIA (ESPAÑA)
+        </p>
+      </div>
+
+      <div class="border rounded-2xl p-6">
+        <h3 class="text-sm uppercase tracking-wider opacity-70">Contact Us</h3>
+        <p class="mt-3">
+          Email :
+          <a class="underline hover:opacity-80" href="mailto:info@2c-creativeinteractive.com">
+            info@2c-creativeinteractive.com
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

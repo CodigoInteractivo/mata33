@@ -1,0 +1,20 @@
+---
+const nav = [
+  { label: "Home", href: "/" },
+  { label: "What we do", href: "/#what-we-do" },
+  { label: "Contact", href: "/#contact" },
+];
+---
+<header class="border-b">
+  <div class="mx-auto max-w-5xl px-4 py-4 flex items-center justify-between">
+    <a href="/" class="font-semibold tracking-tight">2C Creative Interactive</a>
+
+    <nav class="flex gap-4 text-sm">
+      {nav.map((item) => (
+        <a href={item.href} class="hover:underline">
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
